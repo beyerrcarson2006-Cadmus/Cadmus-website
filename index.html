@@ -9,6 +9,21 @@
   gtag('js', new Date());
 
   gtag('config', 'G-MGMF30J2XP');
+  <!-- Click Tracking Script -->
+<script>
+  // Tracks any button with data-track attribute
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("[data-track]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        const eventName = btn.getAttribute("data-track");
+        gtag("event", "click", {
+          "event_category": "button",
+          "event_label": eventName
+        });
+      });
+    });
+  });
+</script>
 </script>
   <meta charset="UTF-8" />
   <title>Cadmus Language Solutions – Making Connection Possible</title>
@@ -406,11 +421,11 @@
           <em>“Making connection possible.”</em>
         </div>
         <div class="hero-actions">
-          <a href="#contact" class="btn-primary">
+          <a href="#contact" class="btn-primary" data-track="request_pilot_click">
             <span>Request pilot conversation</span>
             <span class="arrow">→</span>
           </a>
-          <a href="#how" class="btn-ghost">
+          <a href="#how" class="btn-ghost" data-track="how_pilot_works_click">
             <span>How the pilot works</span>
           </a>
         </div>
@@ -623,4 +638,5 @@
   </div>
 </body>
 </html>
+
 
