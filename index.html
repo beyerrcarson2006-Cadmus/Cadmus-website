@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MGMF30J2XP"></script>
   <script>
@@ -9,7 +12,6 @@
 
   <!-- Click Tracking Script -->
   <script>
-    // Tracks any element with a data-track attribute
     document.addEventListener("DOMContentLoaded", function () {
       document.querySelectorAll("[data-track]").forEach(function (btn) {
         btn.addEventListener("click", function () {
@@ -45,23 +47,16 @@
       --max-width: 960px;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: radial-gradient(circle at top, #eef2ff, #f9fafb);
       color: var(--text-main);
       line-height: 1.6;
     }
 
-    a {
-      color: inherit;
-    }
+    a { color: inherit; }
 
     .page {
       max-width: var(--max-width);
@@ -78,19 +73,11 @@
     }
 
     @media (max-width: 720px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      header { flex-direction: column; align-items: flex-start; }
     }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
+    .logo { display: flex; align-items: center; gap: 12px; }
 
-    /* If you export your logo as logo.png, it will appear here */
     .logo-icon {
       width: 44px;
       height: 44px;
@@ -103,12 +90,6 @@
       overflow: hidden;
     }
 
-    .logo-icon img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
     .logo-text-title {
       font-weight: 700;
       font-size: 1rem;
@@ -116,10 +97,7 @@
       text-transform: uppercase;
     }
 
-    .logo-text-sub {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
+    .logo-text-sub { font-size: 0.8rem; color: var(--text-muted); }
 
     .badge {
       font-size: 0.75rem;
@@ -144,11 +122,7 @@
       align-items: center;
     }
 
-    @media (max-width: 800px) {
-      .hero {
-        grid-template-columns: 1fr;
-      }
-    }
+    @media (max-width: 800px) { .hero { grid-template-columns: 1fr; } }
 
     .hero-pill {
       font-size: 0.8rem;
@@ -184,12 +158,7 @@
       margin-bottom: 18px;
     }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 12px; }
 
     .btn-primary {
       background: var(--accent);
@@ -206,9 +175,7 @@
       gap: 8px;
     }
 
-    .btn-primary span.arrow {
-      font-size: 1.1rem;
-    }
+    .btn-primary span.arrow { font-size: 1.1rem; }
 
     .btn-ghost {
       background: transparent;
@@ -225,50 +192,30 @@
       gap: 8px;
     }
 
-    .hero-footnote {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
+    .hero-footnote { font-size: 0.8rem; color: var(--text-muted); }
 
     .hero-card {
       background: var(--accent-lite);
       border-radius: 22px;
-      padding: 18px 18px 16px;
+      padding: 18px;
       border: 1px solid var(--accent-soft);
     }
 
-    .hero-card-title {
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
+    .hero-card-title { font-size: 0.9rem; font-weight: 600; margin-bottom: 8px; }
 
     .hero-metric-row {
       display: flex;
       justify-content: space-between;
-      align-items: center;
       margin-bottom: 6px;
       font-size: 0.8rem;
       color: var(--text-muted);
     }
 
-    .hero-metric-value {
-      font-weight: 600;
-      color: var(--accent);
-    }
+    .hero-metric-value { font-weight: 600; color: var(--accent); }
 
-    .divider {
-      height: 1px;
-      background: #e5e7eb;
-      margin: 14px 0;
-    }
+    .divider { height: 1px; background: #e5e7eb; margin: 14px 0; }
 
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 10px;
-    }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
 
     .pill {
       font-size: 0.7rem;
@@ -278,35 +225,19 @@
       color: #374151;
     }
 
-    main {
-      margin-top: 28px;
-      display: grid;
-      gap: 22px;
-    }
+    main { margin-top: 28px; display: grid; gap: 22px; }
 
     .section {
       background: rgba(255, 255, 255, 0.95);
       border-radius: var(--radius-lg);
-      padding: 20px 18px 18px;
+      padding: 20px;
       border: 1px solid rgba(209, 213, 219, 0.8);
     }
 
-    .section h2 {
-      font-size: 1.15rem;
-      margin-bottom: 8px;
-    }
+    .section h2 { font-size: 1.15rem; margin-bottom: 8px; }
+    .section p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 10px; }
 
-    .section p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-    }
-
-    .section-list {
-      list-style: none;
-      margin-top: 4px;
-    }
-
+    .section-list { list-style: none; margin-top: 4px; }
     .section-list li {
       font-size: 0.9rem;
       margin-bottom: 6px;
@@ -314,30 +245,16 @@
       align-items: flex-start;
       gap: 8px;
     }
-
-    .section-list li::before {
-      content: "•";
-      color: var(--accent);
-      margin-top: 2px;
-    }
+    .section-list li::before { content: "•"; color: var(--accent); margin-top: 2px; }
 
     .two-col {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
       gap: 18px;
     }
+    @media (max-width: 800px) { .two-col { grid-template-columns: 1fr; } }
 
-    @media (max-width: 800px) {
-      .two-col {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .tagline {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
+    .tagline { font-size: 0.8rem; color: var(--text-muted); margin-top: 4px; }
 
     .form {
       display: grid;
@@ -345,10 +262,7 @@
       margin-top: 8px;
     }
 
-    .form-row {
-      display: grid;
-      gap: 6px;
-    }
+    .form-row { display: grid; gap: 6px; }
 
     .form label {
       font-size: 0.8rem;
@@ -366,10 +280,7 @@
       font-family: inherit;
     }
 
-    .form textarea {
-      min-height: 70px;
-      resize: vertical;
-    }
+    .form textarea { min-height: 70px; resize: vertical; }
 
     footer {
       margin-top: 22px;
@@ -378,20 +289,15 @@
       text-align: center;
     }
 
-    footer span.brand {
-      font-weight: 600;
-      color: var(--accent);
-    }
+    footer span.brand { font-weight: 600; color: var(--accent); }
   </style>
 </head>
+
 <body>
   <div class="page">
     <header>
       <div class="logo">
         <div class="logo-icon">
-          <!-- Replace logo.png with your actual logo file name -->
-          <!-- If you don't have the file yet, you can leave this as text for now -->
-          <!-- <img src="logo.png" alt="Cadmus Language Solutions logo" /> -->
           <span style="font-weight:700; color:#1e3a8a;">C</span>
         </div>
         <div>
@@ -407,26 +313,32 @@
         <div class="hero-pill">
           ⚕️ Human-first medical interpreting
         </div>
+
         <h1 class="hero-title">
           Fast, reliable interpreting<br />for clinics that can’t afford miscommunication.
         </h1>
+
         <p class="hero-subtitle">
           Cadmus Language Solutions connects your providers and patients with
           qualified medical interpreters—responsive, local, and built around
           real clinic workflows.
         </p>
+
         <div class="hero-mantra">
           <em>“Making connection possible.”</em>
         </div>
+
         <div class="hero-actions">
           <a href="#contact" class="btn-primary" data-track="request_pilot_click">
             <span>Request pilot conversation</span>
             <span class="arrow">→</span>
           </a>
+
           <a href="#how" class="btn-ghost" data-track="how_pilot_works_click">
             <span>How the pilot works</span>
           </a>
         </div>
+
         <div class="hero-footnote">
           We’re currently speaking with a small number of clinics for a focused 30-day pilot.
         </div>
@@ -434,90 +346,74 @@
 
       <div class="hero-card">
         <div class="hero-card-title">For teams that need more than “good enough” interpreting.</div>
+
         <div class="hero-metric-row">
           <span>Core focus</span>
           <span class="hero-metric-value">Healthcare conversations</span>
         </div>
+
         <div class="hero-metric-row">
           <span>Service type</span>
           <span class="hero-metric-value">Remote &amp; scheduled sessions</span>
         </div>
+
         <div class="divider"></div>
+
         <div class="pill-row">
           <div class="pill">Primary care</div>
           <div class="pill">Community health / FQHC</div>
           <div class="pill">Physical therapy</div>
           <div class="pill">Urgent care</div>
         </div>
+
         <p style="font-size: 0.8rem; color: #4b5563;">
-          We exist so your staff doesn’t have to “make do” with whoever kind-of speaks
-          the language. You focus on care; we focus on connection.
+          We exist so your staff doesn’t have to “make do” with whoever kind-of speaks the language.
+          You focus on care; we focus on connection.
         </p>
       </div>
     </section>
 
     <main>
+
       <section class="section" id="what">
         <h2>What we do</h2>
         <p>
           Cadmus Language Solutions focuses on one thing: helping providers communicate clearly
           with patients who have limited English proficiency, without adding chaos to your day.
         </p>
+
         <ul class="section-list">
-          <li>
-            <strong>On-demand remote interpreting</strong> (phone or video) for core languages
-            during your operating hours.
-          </li>
-          <li>
-            <strong>Scheduled sessions</strong> for evaluations, follow-up visits, and recurring
-            appointments.
-          </li>
-          <li>
-            <strong>Culturally aware interpreters</strong> with medical vocabulary and a
-            human-first approach to sensitive conversations.
-          </li>
+          <li><strong>On-demand remote interpreting</strong> (phone or video)</li>
+          <li><strong>Scheduled sessions</strong> for longer visits</li>
+          <li><strong>Culturally aware interpreters</strong> with medical vocabulary</li>
         </ul>
       </section>
 
       <section class="section two-col" id="why">
         <div>
           <h2>Why clinics choose Cadmus</h2>
-          <p>
-            We’re designing Cadmus with input from real clinics so it fits into your workflows
-            instead of fighting them.
-          </p>
+          <p>Designed with input from real clinics so it fits into your workflows instead of fighting them.</p>
+
           <ul class="section-list">
-            <li>
-              <strong>Responsive by design</strong> — Our pilot goal is under 10 minutes from
-              request to interpreter connection for core languages.
-            </li>
-            <li>
-              <strong>Human-first, not call-center first</strong> — Patients speak with real,
-              qualified interpreters, not anonymous voices with no context.
-            </li>
-            <li>
-              <strong>Flexible &amp; local</strong> — Small enough to know your clinic, flexible
-              enough to adjust quickly as you grow.
-            </li>
-            <li>
-              <strong>Compliance-minded</strong> — Built with language access and privacy
-              requirements in mind, to support your existing compliance efforts.
-            </li>
+            <li><strong>Responsive by design</strong> — aiming for under 10 minutes to connect</li>
+            <li><strong>Human-first, not call-center first</strong></li>
+            <li><strong>Flexible &amp; local</strong></li>
+            <li><strong>Compliance-minded</strong></li>
           </ul>
         </div>
+
         <div>
           <h2>Who we work with</h2>
-          <p>
-            Cadmus is a fit for clinics and care teams that regularly need interpreters and want a
-            more responsive, human-centered option.
-          </p>
+          <p>A fit for clinics who need interpreters regularly and want a more responsive, human-centered option.</p>
+
           <ul class="section-list">
-            <li>Primary care &amp; family medicine clinics</li>
-            <li>Community health centers &amp; FQHCs</li>
-            <li>Physical therapy &amp; rehabilitation clinics</li>
-            <li>Urgent care &amp; walk-in clinics</li>
-            <li>Specialty practices (OB/GYN, pediatrics, etc.)</li>
+            <li>Primary care &amp; family medicine</li>
+            <li>Community health &amp; FQHCs</li>
+            <li>Rehabilitation &amp; physical therapy</li>
+            <li>Urgent care</li>
+            <li>Specialty practices</li>
           </ul>
+
           <p class="tagline">
             If your staff ever relies on “whoever speaks a bit of the language,” we built this for you.
           </p>
@@ -530,57 +426,39 @@
           We’re starting with a focused 30-day pilot to learn with a small group of clinics and
           refine Cadmus around real-world use.
         </p>
+
         <ul class="section-list">
-          <li>
-            <strong>1. Quick intro call (15–20 minutes)</strong><br />
-            We learn your visit volume, common languages, and current interpreting setup.
-          </li>
-          <li>
-            <strong>2. Simple setup</strong><br />
-            You get a clear way to request interpreters (secure phone number or web form).
-            We handle coordination behind the scenes.
-          </li>
-          <li>
-            <strong>3. 30-day pilot</strong><br />
-            Your team uses Cadmus for select visits. We track response times, fill rates, and staff
-            feedback.
-          </li>
-          <li>
-            <strong>4. Review &amp; decide next steps</strong><br />
-            At the end of the pilot, we share a short report and decide together whether to expand,
-            adjust, or pause.
-          </li>
+          <li><strong>1. Quick intro call</strong> — 15–20 minutes</li>
+          <li><strong>2. Simple setup</strong> — secure number or request link</li>
+          <li><strong>3. 30-day pilot</strong> — track response times & feedback</li>
+          <li><strong>4. Review</strong> — decide next steps</li>
         </ul>
       </section>
 
       <section class="section two-col" id="about">
+
         <div>
           <h2>Why “Cadmus”?</h2>
           <p>
-            In Greek legend, Cadmus is credited with bringing the alphabet—and written language—to a
-            new people. He’s a symbol of communication, understanding, and cultural connection.
+            In Greek legend, Cadmus is credited with bringing the alphabet—and written language—to a new people.
           </p>
           <p>
-            Cadmus Language Solutions carries that spirit forward: helping providers and patients
-            truly understand each other when it matters most.
+            Cadmus Language Solutions carries that spirit forward: helping providers and patients truly understand each other.
           </p>
         </div>
 
         <div id="contact">
           <h2>Interested in the pilot?</h2>
-          <p>
-            Share a few details and we’ll follow up to schedule a short conversation.
-          </p>
-          <!-- NOTE: this form doesn't submit anywhere yet.
-               When you're ready, you can:
-               - change action="" to a real URL (Formspree, Getform, your backend, etc.)
-               - or use this design as a visual and hook it up in your site builder
-           -->
-          <form class="form" action="" method="post">
+          <p>Share a few details and we’ll follow up to schedule a short conversation.</p>
+
+          <form class="form" action="https://formspree.io/f/xovyeben" method="POST">
+            <input type="hidden" name="_subject" value="New Cadmus pilot request" />
+
             <div class="form-row">
               <label for="name">Name</label>
               <input id="name" name="name" type="text" placeholder="Your name" />
             </div>
+
             <div class="form-row">
               <label for="role">Role</label>
               <select id="role" name="role">
@@ -590,38 +468,32 @@
                 <option>Other</option>
               </select>
             </div>
+
             <div class="form-row">
               <label for="clinic">Clinic / Organization</label>
               <input id="clinic" name="clinic" type="text" placeholder="Clinic name" />
             </div>
+
             <div class="form-row">
               <label for="email">Email</label>
               <input id="email" name="email" type="email" placeholder="you@clinic.org" />
             </div>
+
             <div class="form-row">
-              <label for="volume">
-                Roughly how often do you need an interpreter in a typical week?
-              </label>
-              <textarea
-                id="volume"
-                name="volume"
-                placeholder="e.g., 10–15 visits per week, mainly Spanish and Vietnamese"
-              ></textarea>
+              <label for="volume">How often do you need an interpreter per week?</label>
+              <textarea id="volume" name="volume" placeholder="e.g., 10–15 per week"></textarea>
             </div>
+
             <div class="form-row">
-              <label for="pain">
-                What’s most frustrating about your current interpreting setup?
-              </label>
-              <textarea
-                id="pain"
-                name="pain"
-                placeholder="Slow response time, no-shows, not specialized in medical settings, etc."
-              ></textarea>
+              <label for="pain">What’s most frustrating about your current setup?</label>
+              <textarea id="pain" name="pain" placeholder="Slow response time, no-shows, etc."></textarea>
             </div>
+
             <button type="submit" class="btn-primary" style="justify-content: center; margin-top: 4px;">
               <span>Request a pilot conversation</span>
               <span class="arrow">→</span>
             </button>
+
             <div class="hero-footnote" style="margin-top: 6px;">
               We respect your time—expect a short, focused email reply, not a sales blast.
             </div>
@@ -636,6 +508,3 @@
   </div>
 </body>
 </html>
-
-
-
