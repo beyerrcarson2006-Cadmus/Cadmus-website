@@ -315,7 +315,7 @@
           <div class="logo-text-sub">Making connection possible.</div>
         </div>
       </div>
-      <div class="badge">Early-access pilot • Clinics welcome</div>
+      <div class="badge">Early-access pilot · Clinics welcome</div>
     </header>
 
     <section class="hero">
@@ -461,17 +461,18 @@
           <h2>Interested in the pilot?</h2>
           <p>Share a few details and we’ll follow up to schedule a short conversation.</p>
 
-          <form class="form" action="https://formspree.io/f/xovyeben" method="POST">
+          <form id="pilot-form" class="form" action="https://formspree.io/f/xovyeben" method="POST" autocomplete="on">
             <input type="hidden" name="_subject" value="New Cadmus pilot request" />
 
             <div class="form-row">
               <label for="name">Name</label>
-              <input id="name" name="name" type="text" placeholder="Your name" />
+              <input id="name" name="name" type="text" placeholder="Your name" required autocomplete="name" />
             </div>
 
             <div class="form-row">
               <label for="role">Role</label>
-              <select id="role" name="role">
+              <select id="role" name="role" required>
+                <option value="">Select your role</option>
                 <option>Clinic manager</option>
                 <option>Provider</option>
                 <option>Administrator</option>
@@ -481,87 +482,4 @@
 
             <div class="form-row">
               <label for="clinic">Clinic / Organization</label>
-              <input id="clinic" name="clinic" type="text" placeholder="Clinic name" />
-            </div>
-
-            <div class="form-row">
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="you@clinic.org" />
-            </div>
-
-            <div class="form-row">
-              <label for="volume">How often do you need an interpreter per week?</label>
-              <textarea id="volume" name="volume" placeholder="e.g., 10–15 per week"></textarea>
-            </div>
-
-            <div class="form-row">
-              <label for="pain">What’s most frustrating about your current setup?</label>
-              <textarea id="pain" name="pain" placeholder="Slow response time, no-shows, etc."></textarea>
-            </div>
-
-            <button type="submit" class="btn-primary" style="justify-content: center; margin-top: 4px;">
-              <span>Request a pilot conversation</span>
-              <span class="arrow">→</span>
-            </button>
-
-            <div class="hero-footnote" style="margin-top: 6px;">
-              We respect your time—expect a short, focused email reply, not a sales blast.
-            </div>
-
-            <!-- Thank you message -->
-            <div id="thankyou-message" style="
-              display:none;
-              margin-top:16px;
-              padding:12px;
-              background:#ecfdf5;
-              border:1px solid #bbf7d0;
-              color:#065f46;
-              border-radius:10px;
-              font-size:0.9rem;
-            ">
-              Thank you — your request has been received. We’ll follow up shortly.
-            </div>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <span class="brand">Cadmus Language Solutions</span> · Making connection possible.
-    </footer>
-  </div>
-
-  <!-- Formspree submit + thank-you logic -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.querySelector("form");
-      const thankyou = document.getElementById("thankyou-message");
-
-      if (!form || !thankyou) return;
-
-      form.addEventListener("submit", async function (event) {
-        event.preventDefault();
-
-        const formData = new FormData(form);
-
-        try {
-          const response = await fetch(form.action, {
-            method: form.method,
-            body: formData,
-            headers: { "Accept": "application/json" }
-          });
-
-          if (response.ok) {
-            form.reset();
-            thankyou.style.display = "block";
-          } else {
-            alert("Something went wrong. Please try again.");
-          }
-        } catch (err) {
-          alert("Network error. Please try again.");
-        }
-      });
-    });
-  </script>
-</body>
-</html>
+              <input id="clinic" name="clinic" type="text" placeholder="Clinic name" autocomplete="organi
