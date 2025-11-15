@@ -1,30 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MGMF30J2XP"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MGMF30J2XP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-MGMF30J2XP');
+  </script>
 
-  gtag('config', 'G-MGMF30J2XP');
   <!-- Click Tracking Script -->
-<script>
-  // Tracks any button with data-track attribute
-  document.addEventListener("DOMContentLoaded", function () {
-    document.querySelectorAll("[data-track]").forEach(function (btn) {
-      btn.addEventListener("click", function () {
-        const eventName = btn.getAttribute("data-track");
-        gtag("event", "click", {
-          "event_category": "button",
-          "event_label": eventName
+  <script>
+    // Tracks any element with a data-track attribute
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll("[data-track]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          const eventName = btn.getAttribute("data-track");
+          gtag("event", "click", {
+            event_category: "button",
+            event_label: eventName
+          });
         });
       });
     });
-  });
-</script>
-</script>
+  </script>
+
   <meta charset="UTF-8" />
   <title>Cadmus Language Solutions – Making Connection Possible</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -638,5 +636,6 @@
   </div>
 </body>
 </html>
+
 
 
